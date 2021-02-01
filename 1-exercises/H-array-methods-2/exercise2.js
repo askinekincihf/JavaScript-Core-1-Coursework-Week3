@@ -8,7 +8,7 @@
 */
 
 function capitalise(str) {
-  return;
+return str;
 }
 
 /* 
