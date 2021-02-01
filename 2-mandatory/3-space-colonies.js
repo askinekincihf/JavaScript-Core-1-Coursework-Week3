@@ -15,7 +15,13 @@
   
 */
 
-function colonisers() {}
+// Solution - 1
+// function colonisers(arr) {
+//   return arr.filter(name => name.includes("family") && name.startsWith("A"));
+// }
+
+// Solution - 2
+const colonisers = (arr) => arr.filter(name => name.includes("family") && name.startsWith("A"));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
