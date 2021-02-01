@@ -12,15 +12,15 @@
 */
 
 // Solution -1
-function safeLevels(arr) {
-  const oxygenLevel = arr
-    .map(level => level.substring(0, 4))
-    .find(num => num > 19.5 && num < 23.5) + "%";
-  return oxygenLevel;
-}
+// function safeLevels(arr) {
+//   const oxygenLevel = arr
+//     .map(level => level.substring(0, 4))
+//     .find(num => num > 19.5 && num < 23.5) + "%";
+//   return oxygenLevel;
+// }
 
 // Solution - 2
-// const safeLevels = (arr) => arr.map(level => level.substring(0, 4)).find(num => num > 19.5 && num < 23.5) + "%";
+const safeLevels = (arr) => arr.map(level => level.substring(0, 4)).find(num => num > 19.5 && num < 23.5) + "%";
 
 // Solution -3
 // const safeLevels = (arr) => arr.map(level => level.replace("%", "")).find(num => num > 19.5 && num < 23.5) + "%";

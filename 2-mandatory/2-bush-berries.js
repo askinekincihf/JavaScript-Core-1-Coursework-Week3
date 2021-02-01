@@ -21,7 +21,30 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
-function bushChecker() {}
+// Solution - 1
+// function bushChecker(arr) {
+//   const bushes = arr.every((bush => bush === "pink"))
+//   if(bushes) {
+//     return "Bush is safe to eat from"
+//   }
+//   return "Toxic! Leave bush alone!";
+// }
+
+// Solution - 2
+// function bushChecker(arr) {
+//   const bushes = arr.some((bush => bush !== "pink"))
+//   if(!bushes) {
+//     return "Bush is safe to eat from"
+//   }
+//   return "Toxic! Leave bush alone!";
+// }
+
+
+// Solution - 3 
+const bushChecker = (arr) => arr.every((bush => bush === "pink")) ? "Bush is safe to eat from" : "Toxic! Leave bush alone!";
+
+//  Solution - 4
+// const bushChecker = (arr) => arr.some((bush => bush !== "pink")) ? "Toxic! Leave bush alone!" : "Bush is safe to eat from";
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -44,13 +67,13 @@ function test(test_name, actual, expected) {
 }
 
 test(
-  "bushChecker funtion works - case 1",
+  "bushChecker function works - case 1",
   bushChecker(bushBerryColours1),
   "Toxic! Leave bush alone!"
 );
 
 test(
-  "bushChecker funtion works - case 1",
+  "bushChecker function works - case 1",
   bushChecker(bushBerryColours2),
   "Bush is safe to eat from"
 );
