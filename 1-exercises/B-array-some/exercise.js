@@ -15,7 +15,7 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 const checkNullValue = (arr) => {
   let nullValue = arr.some(item => item === null);
   if (nullValue) {
-    return `https://nodejs.org/api/process.html#process_process_exit_code /n process.exit(1);`
+    process.exit(1);
   }
 }
 

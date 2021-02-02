@@ -8,7 +8,10 @@
 */
 
 function capitalise(str) {
-return str;
+  const splittedStr = str.split("", 1);
+  console.log(str)
+  strUpperCase = splittedStr[0].toUpperCase();
+  return strUpperCase.join();
 }
 
 /* 
