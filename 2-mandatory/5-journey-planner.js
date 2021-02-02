@@ -16,16 +16,22 @@
 
  Hint: search for string methods like Includes and IndexOf.
 */
+// Solution - 1
+// function checkCodeIsThere(stringText) {
+//   let magicWord = "code";
+//   //edit code below
+//   if (stringText.includes(magicWord)) {
+//     return stringText.indexOf(magicWord);
+//   } else {
+//     return "Not found";
+//   }
+// }
 
-function checkCodeIsThere(stringText) {
-  let magicWord = "code";
-  //edit code below
-  if (stringText.includes(magicWord)) {
-    return stringText.indexOf(magicWord);
-  } else {
-    return "Not found";
-  }
-}
+const { truncate } = require("fs");
+
+//Solution - 2
+let magicWord = "code";
+const checkCodeIsThere = (stringText) => stringText.includes(magicWord) ? stringText.indexOf(magicWord) : "Not found";
 
 /*
   I am new to London and would like to know what transport I can take to different famous locations.
@@ -64,9 +70,14 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes(arr) {
-  return arr.split(1, arr.length)
-}
+// Solution - 1
+// function getTransportModes(arr) {
+//   const availableTransports =  arr.slice(1);
+//   return availableTransports;
+// }
+
+// Solution - 2
+const getTransportModes = (arr) => arr.slice(1);
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -83,7 +94,17 @@ function getTransportModes(arr) {
     
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() {}
+// Solution - 1
+// function isAccessibleByTransportMode(getTransportModes, str) {
+//   if(getTransportModes.includes(str)){
+//     return true;
+//   } else{
+//     return false;
+//   }
+// }
+
+// Solution - 2
+const isAccessibleByTransportMode = (getTransportModes, str) => getTransportModes.includes(str) ? true : false;
 
 /*
   Implement the function getLocationName that
@@ -94,8 +115,14 @@ function isAccessibleByTransportMode() {}
    - Returns the name of the location
       e.g: "Tower Bridge"
 */
-function getLocationName() {}
+// Solution - 1
+// function getLocationName(arr) {
+//   const location = arr[0];
+//   return location;
+// }
 
+// Solution - 2
+const getLocationName = (arr) => arr[0];
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
 
@@ -121,11 +148,20 @@ function getLocationName() {}
    - Use array method to remove locations that is not accessible by the given transportMode.
    - Use array method to manipulate its elements.
    
-  Advanced challange: try to use arrow function when invoking an array method.
+  Advanced challenge: try to use arrow function when invoking an array method.
 */
-function journeyPlanner(locations, transportMode) {
-  // Implement the function body
-}
+// Solution - 1
+// function journeyPlanner(locations, transportMode) {
+//   const location = locations
+//     .filter(item => item.includes(transportMode))
+//     .map(item => item[0])
+//   return location;
+// }
+
+// Solution -2 
+const journeyPlanner = (locations, transportMode) => locations
+  .filter(location => location.includes(transportMode))
+  .map(location => location[0]);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
