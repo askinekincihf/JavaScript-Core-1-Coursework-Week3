@@ -5,8 +5,13 @@
 
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
+// Solution - 1
+// function getLanes(arr) {
+//   return arr.filter(street => street.includes("Lane"));
+// }
 
-function getLanes() {}
+// Solution -2
+const getLanes = (arr) => arr.filter(street => street.includes("Lane"));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
