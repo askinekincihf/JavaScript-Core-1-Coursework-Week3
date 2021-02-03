@@ -27,7 +27,7 @@ function upperCaseLetters (string){
 }
 
 function lowerCaseLetters (string){
-  return /[A-Z]/.test(string)
+  return /[a-z]/.test(string)
 }
 
 function numbers (string){
