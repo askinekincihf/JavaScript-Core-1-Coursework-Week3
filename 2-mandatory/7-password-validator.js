@@ -22,9 +22,36 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
-
+function upperCaseLetters (string){
+  return /[A-Z]/.test(string)
 }
+
+function lowerCaseLetters (string){
+  return /[A-Z]/.test(string)
+}
+
+function numbers (string){
+  return /[0-9]/.test(string)
+}
+
+function symbols (string){
+  return /[!#$%.*&]/.test(string)
+}
+
+// Solution - 1
+// function validatePasswords(passwords) {
+//   const validation = passwords.map((pass, index, array) => pass.length >= 5 && upperCaseLetters(pass) && lowerCaseLetters(pass) && numbers(pass) && symbols(pass) && array.indexOf(pass) === index ? true : false);
+//   return validation;
+// }
+
+// Solution - 2
+const validatePasswords = (passwords) => passwords.map((pass, index, array) => 
+pass.length >= 5 
+&& upperCaseLetters(pass) 
+&& lowerCaseLetters(pass) 
+&& numbers(pass) 
+&& symbols(pass) 
+&& array.indexOf(pass) === index ? true : false);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
